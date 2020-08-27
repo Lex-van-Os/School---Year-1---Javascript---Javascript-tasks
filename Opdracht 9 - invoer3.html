@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>invoer2</title>
+</head>
+<body>
+<h1>Invoer</h1>
+<p>Invoer met behulp van getElementBId()</p>
+<p>Uitvoer met bejulp van document.write()</p>
+<p><input type="text" id="naam" placeholder="Wat is uw naam?"></p>
+<p><input type="text" id="leeftijd" placeholder="Wat is uw leeftijd?"></p>
+<p><button onclick="berekenen()">OK</button></p>
+<p id="name"></p>
+<p id="age"></p>
+
+<script>
+    // invoer ----------------------------
+    function berekenen() {
+        var naam = document.getElementById("naam").value;
+        var leeftijd = document.getElementById("leeftijd").value;
+
+        // uitvoer en berekening ---------
+        document.getElementById("name") .innerHTML = "naam is "+naam+"";
+        document.getElementById("age") .innerHTML = "leeftijd is "+leeftijd+"";
+    }
+</script>
+</body>
+</html>

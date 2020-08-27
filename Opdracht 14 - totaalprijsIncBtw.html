@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>totaalprijsIncBtw</title>
+</head>
+<body>
+<h1>Totaalprijs met BTW </h1>
+<p><input type="text" id="artikel" placeholder="Hoeveel artikelen wilt u?"></p>
+<p><input type="text" id="prijs" placeholder="Wat is de prijs per artikel?"></p>
+<p><button onclick="berekenen()">OK</button></p>
+<p id="article"></p>
+<p id="price"></p>
+<p id="pricebtw"></p>
+
+<script>
+
+    //invoer ----------------------------
+    function berekenen() {
+        var artikel = document.getElementById("artikel").value;
+        var prijs = document.getElementById("prijs").value;
+        var totaalprijs = artikel * prijs;
+        var totaalprijsbtw = totaalprijs / 21;
+
+        //berekening & uitvoer --------------
+        document.getElementById("article") .innerHTML = "<p> Het aantal artikelen is... " + artikel + "</p>";
+        document.getElementById("price") .innerHTML = "<p> De totaalprijs is... " + totaalprijs + "</p>";
+        document.getElementById("pricebtw") .innerHTML = "<p> De totaalprijs incl btw is..." + totaalprijsbtw + "</p>";
+
+    }
+
+
+</script>
+</body>
+</html>

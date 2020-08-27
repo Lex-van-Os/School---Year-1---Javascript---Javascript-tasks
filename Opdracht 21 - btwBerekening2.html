@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>btwBerekening2</title>
+</head>
+<body>
+<h1>btwBerekening2</h1>
+<p><input type="text" id="artikel" placeholder="Voer hier uw artikel in"></p>
+<p><input type="text" id="prijs" placeholder="Voer hier uw prijs in"></p>
+<p><input type="text" id="btwcode" placeholder="Voer hier de btw code in"></p>
+<p><button onclick="berekenen()">OK</button></p>
+<p id="articles"></p>
+<p id="price"></p>
+<p id="totalprice"></p>
+<p id="btw"></p>
+<p id="totalpricebtw"></p>
+<script>
+
+    function berekenen(){
+
+        var artikel = document.getElementById("artikel").value;
+        var prijs = document.getElementById("prijs").value;
+        var btwcode = document.getElementById("btwcode").value;
+        var totaalprijs = artikel * prijs;
+        var btw = totaalprijs / 100 * btwcode;
+        var totaalprijsbtw = totaalprijs + btw;
+
+        document.getElementById("articles").innerHTML = "<p> Het aantal artikelen is: " + artikel + "</p>";
+        document.getElementById("price").innerHTML = "<p> De prijs per artikel is: " + prijs + "</p>";
+        document.getElementById("totalprice").innerHTML = "<p> De totaalprijs is: " + totaalprijs + "</p>";
+        document.getElementById("btw").innerHTML = "<p> Het btw bedrag is: " + btw + "</p>";
+        document.getElementById("totalpricebtw").innerHTML = "<p> De totaalprijs inclusief btw is: " + totaalprijsbtw + "</p>"
+    }
+</script>
+</body>
+</html>

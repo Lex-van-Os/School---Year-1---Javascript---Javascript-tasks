@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>schildersbedrijf</title>
+</head>
+<body>
+<h1>schildersbedrijf</h1>
+<p><input type="text" id="oppervlak" placeholder="Wat is het oppervlak?"></p>
+<p><input type="text" id="lengte" placeholder="Wat is de lengte?"></p>
+<p><input type="text" id="breedte" placeholder="Wat is de breedte?"></p>
+<p><button onclick="berekenen()">OK</button></p>
+<p id="opp"></p>
+<p id="totalprice"></p>
+<p id="length"></p>
+<p id="width"></p>
+<script>
+    //invoer -----------------------------------------------------------
+    function berekenen(){
+        var oppervlak = document.getElementById("oppervlak").value;
+        var lengte = document.getElementById("lengte").value;
+        var breedte = document.getElementById("breedte").value;
+        var oppervlakte = lengte * breedte;
+        var prijs1 = 25;
+        var prijs2 = 30;
+        var prijs3 = 40;
+        var totaalprijs1 = oppervlakte * prijs1;
+
+        //uitvoer ---------------------------------------------------------
+        document.getElementById("length").innerHTML = "<p> De lengte is: " + lengte + " meter</p>";
+        document.getElementById("width").innerHTML = "<p> De breedte is: " + breedte + " meter</p>";
+
+        if (oppervlak === 'muur'){
+            document.getElementById("opp").innerHTML =
+                "De oppervlakte is muur <br>"+
+                 "De prijs is: " + prijs1 + " euro per m2 <br>"+
+                "De totaalprijs is: " + prijs1 * oppervlakte + " euro";
+        }
+        else if (oppervlak === 'vloer'){
+            document.getElementById("opp").innerHTML =
+                "De oppervlakte is vloer <br>"+
+                "De prijs is: " + prijs2 + " euro per m2 <br>"+
+                    "De totaalprijs is: " + prijs2 * oppervlakte + " euro";
+        }
+        else if (oppervlak === 'plafond'){
+            document.getElementById("opp").innerHTML =
+                "De oppervlakte is plafond <br>"+
+                "De prijs is: " + prijs3 + " euro per m2 <br>"+
+                    "De totaalprijs is: " + prijs3 * oppervlakte + " euro";
+        }
+    }
+
+</script>
+</body>
+</html>

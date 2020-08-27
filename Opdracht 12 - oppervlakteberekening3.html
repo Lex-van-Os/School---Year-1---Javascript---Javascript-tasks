@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>oppervlakteberekening3</title>
+</head>
+<body>
+<h1>oppervlakteberekeing</h1>
+<p id="lengte">de lengte is:</p>
+<p id="breedte">de breedte is:</p>
+<p id="oppervlakte">de oppervlakte is:</p>
+<script>
+
+    //invoer --------------------------------
+    var lengte  = prompt ("wat is de lengte?");
+    var breedte = prompt ("wat is de breedte?");
+    var oppervlakte = lengte * breedte;
+    //uitvoer -------------------------------
+    document.getElementById("lengte").innerHTML = "<p> de lengte is:       "+lengte    +"</p>";
+    document.getElementById("breedte").innerHTML = "<p>de breedte is:       "+breedte   +"</p>";
+    document.getElementById("oppervlakte").innerHTML = "<p>de oppervlakte is:   "+oppervlakte       +"</p>";
+
+</script>
+</body>
+</html>

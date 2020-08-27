@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tellendelus3</title>
+</head>
+<body>
+<h1>tellendelus3</h1>
+
+<p><input type="text" id="tafel" placeholder="Voer hier uw tafel in"></p>
+<p><button onclick="berekenen()">OK</button></p>
+<script>
+    //Het vorige programma werkte alleen met de tafel van 17.
+    //Maak nu een programma dat de tafel inleest met getElementById() en dan de eerste 20 regels van die tafel afdrukt.
+    function berekenen(){
+        var tafel = document.getElementById("tafel").value;
+        var o=1;
+        for (i=0; i<= tafel*20; i= tafel*o++){
+            document.write("<p>" + i + "</p>");
+        }
+    }
+
+</script>
+</body>
+</html>

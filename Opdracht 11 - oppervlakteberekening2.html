@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>oppervlakteberekening2</title>
+</head>
+<body>
+<h1>oppervlakteberekening</h1>
+<p> Bereken de oppervlakte</p>
+<p>Invoer met behulp van getElementBId()</p>
+<p>Uitvoer met bejulp van document.write()</p>
+<p><input type="text" id="lengte" placeholder="Wat is de lengte?"></p>
+<p><input type="text" id="breedte" placeholder="Wat is de breedte?"></p>
+<p id="totaal"></p>
+<p><button onclick="berekenen()">OK</button></p>
+
+<script>
+    //invoer -------------
+    function berekenen() {
+        var lengte = document.getElementById("lengte").value;
+        var breedte = document.getElementById("breedte").value;
+        var totaal = lengte * breedte;
+
+
+        //uitvoer ------------
+        document.write("<p>De oppervlakte is... " + totaal + "m2</p>");
+    }
+</script>
+
+
+</body>
+</html>

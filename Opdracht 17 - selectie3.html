@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>selectie3</title>
+</head>
+<body>
+<h1>selectie3</h1>
+<h2>Tijd om te kijken of je korting krijgt</h2>
+<p id="uitvoer">Voer hieronder het aantal artikelen in</p>
+<p><input type="text" id="artikelen" placeholder="Hoeveel artikelen heeft u?"></p>
+<p><button onclick="berekenen()">OK</button></p>
+<p id="antwoord1"></p>
+<p id="antwoord2"></p>
+
+
+<script>
+    function berekenen() {
+        //invoer -------------------
+        var artikelen = document.getElementById("artikelen").value;
+        // uitvoer -----------------
+        if (artikelen < 100) {
+            document.getElementById("antwoord1").innerHTML = "Helaas, u krijgt geen korting";
+        }
+        else
+        {
+            document.getElementById("antwoord2").innerHTML = "Gefeliciteerd, u krijgt 10% korting!"
+        }
+    }
+</script>
+
+</body>
+</html>

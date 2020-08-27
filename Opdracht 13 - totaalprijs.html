@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>totaalprijs</title>
+</head>
+<body>
+<h1>totaalprijs</h1>
+<p><input type="text" id="artikel" placeholder="Hoeveel artikelen wilt u?"></p>
+<p><input type="text" id="prijs" placeholder="Wat is de prijs per artikel?"></p>
+<p><button onclick="berekenen()">OK</button></p>
+<p id="article"></p>
+<p id="price"></p>
+
+<script>
+
+        //invoer ----------------------------
+         function berekenen() {
+             var artikel = document.getElementById("artikel").value;
+             var prijs = document.getElementById("prijs").value;
+             var totaalprijs = artikel * prijs;
+
+        //berekening & uitvoer --------------
+             document.getElementById("article") .innerHTML = "<p> Het aantal artikelen is... " + artikel + "</p>";
+             document.getElementById("price") .innerHTML = "<p> De totaalprijs is... " + totaalprijs + "</p>";
+
+    }
+
+
+</script>
+
+</body>
+</html>

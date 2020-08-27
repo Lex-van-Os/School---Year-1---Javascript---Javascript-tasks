@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>drieDubbeleSelectie</title>
+</head>
+<body>
+<h1>drieDubbeleSelectie</h1>
+<h2> Tijd voor een driedubbele selectie</h2>
+<p id="uitvoer"> Voer hieronder uw leeftijd in</p>
+<p id="antwoord1"></p>
+<p id="antwoord2"></p>
+<p id="antwoord3"></p>
+<p><input type="text" id="leeftijd" placeholder="Voer hier uw leeftijd in"></p>
+<p><button onclick="berekenen()">OK</button></p>
+
+<script>
+    function berekenen() {
+        //invoer -------------------
+        var leeftijd = document.getElementById("leeftijd").value;
+        //uitvoer ------------------
+        if(leeftijd < 8) {
+            document.getElementById("uitvoer").innerHTML = "Hahaha, je bent een koter, kinderopvang voor jou";
+        }
+        else if(leeftijd < 13) {
+            document.getElementById("uitvoer").innerHTML = "lagere school, je bent een koter";
+        }
+        else if(leeftijd < 17){
+            document.getElementById("uitvoer").innerHTML = "middelbare school, je bent nog steeds een koter";
+        }
+        else{
+            document.getElementById("uitvoer").innerHTML = "vervolgonderwijs, u bent nu geen koter meer, u bent cool";
+        }
+    }
+</script>
+</body>
+</html>

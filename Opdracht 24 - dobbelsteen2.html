@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dobbelsteen2.html</title>
+</head>
+<body>
+<h1> opdracht 24 - dobbelsteen2.html</h1>
+<p><button onclick="gooi()">gooi</button></p>
+<p id="uitvoer">Je gooide nog niets</p>
+
+<script>
+    function gooi()
+    {
+        //bepaal een willekeurig getal tussen
+        //de 1 en de 6
+        var worp = Math.floor(Math.random() * 6 + 1);
+        document.getElementById("uitvoer").innerHTML =
+            "je gooide: " + worp;
+    }
+</script>
+</body>
+</html>
